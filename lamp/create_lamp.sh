@@ -8,7 +8,7 @@
 if [ $# -eq 0 ]
 then
    echo "ERROR: Wrong number of parameters!"
-   echo "Usage: crlamp <number>"
+   echo "Usage: create_lamp.sh <number>"
    exit
 fi
 

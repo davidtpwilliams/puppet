@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ $# -lt 2 ]
+then
+   echo "ERROR: Wrong parameters"
+   echo "Usage: tagit <instanceId filename> <number>"
+   exit
+fi
+instance=$1
+aws ec2 create-tags --resources "$instance" --tags Key="Name",Value="Test LAMP Server #$2"

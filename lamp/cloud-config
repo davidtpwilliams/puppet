@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+   echo "Provide the name of the cloud-int file."
+   exit
+fi
+
+echo "Creating new AWS instance with user_data from $1...."
+my_user_data=$1
+echo "user_data file = $my_user_data"
+aws ec2 run-instances \
+  --image-id        ami-11b0c12b \
+  --count           1 \
+  --instance-type   t2.micro \
+  --key-name        awscert \
+  --security-groups puppet SSH WebServer default\
+  --user-data       "$my_user_data" 

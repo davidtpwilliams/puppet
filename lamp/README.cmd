@@ -7,4 +7,4 @@ create_lamp.sh => Main program
 tagit           => Add a name tag to new instance
 terminate       => Will terminate the last instance created (from instance file)
 lamp.data       => The user_data to be run by cloud_int
-cloud-config    => user_data in #cloud-config formt.
+cloud-config    => Run aws ec2 command and user_data
